@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Developer Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="https://kit.fontawesome.com/5cb1178e57.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
             --primary: #2563eb;
@@ -226,8 +226,7 @@
             padding: 20px;
         }
 
-        .profile-background,
-        .profile-background-2 {
+        .profile-background, .profile-background-2 {
             position: absolute;
             top: 0;
             left: 0;
@@ -511,8 +510,7 @@
         .projects-section {
             background: var(--card-bg);
             border-radius: 30px;
-            padding: 3rem 2rem;
-            /* Reduced padding on the sides */
+            padding: 3rem 2rem; /* Reduced padding on the sides */
             box-shadow: var(--card-shadow);
             position: relative;
             overflow: hidden;
@@ -521,8 +519,7 @@
 
         .projects-grid {
             display: grid;
-            grid-template-columns: 1fr;
-            /* Changed to single column */
+            grid-template-columns: 1fr; /* Changed to single column */
             gap: 2rem;
             width: 100%;
         }
@@ -534,16 +531,14 @@
             box-shadow: var(--card-shadow);
             transition: all 0.4s ease;
             display: flex;
-            align-items: flex-start;
-            /* Changed to flex-start for better alignment */
+            align-items: flex-start; /* Changed to flex-start for better alignment */
             gap: 2rem;
             padding: 2rem;
             width: 100%;
         }
 
         .project-image-container {
-            flex: 0 0 120px;
-            /* Reduced size */
+            flex: 0 0 120px; /* Reduced size */
             height: 120px;
             position: relative;
             border-radius: 16px;
@@ -560,23 +555,19 @@
             display: flex;
             flex-direction: column;
             gap: 1rem;
-            min-width: 0;
-            /* Prevents content from overflowing */
+            min-width: 0; /* Prevents content from overflowing */
         }
 
         .tech-stack {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.5rem;
-            /* Reduced gap */
+            gap: 0.5rem; /* Reduced gap */
             margin: 0.5rem 0;
         }
 
         .tech-tag {
-            padding: 0.4rem 0.8rem;
-            /* Slightly reduced padding */
-            font-size: 0.85rem;
-            /* Slightly smaller font */
+            padding: 0.4rem 0.8rem; /* Slightly reduced padding */
+            font-size: 0.85rem; /* Slightly smaller font */
         }
 
         .project-links {
@@ -587,8 +578,7 @@
 
         .project-link {
             flex: 1;
-            white-space: nowrap;
-            /* Prevents text wrapping */
+            white-space: nowrap; /* Prevents text wrapping */
         }
 
         .tech-tag {
@@ -894,20 +884,9 @@
 
         /* Animations */
         @keyframes fadeInOut {
-            0% {
-                opacity: 0.5;
-                transform: translateX(-50%) translateY(0);
-            }
-
-            50% {
-                opacity: 0.8;
-                transform: translateX(-50%) translateY(-5px);
-            }
-
-            100% {
-                opacity: 0.5;
-                transform: translateX(-50%) translateY(0);
-            }
+            0% { opacity: 0.5; transform: translateX(-50%) translateY(0); }
+            50% { opacity: 0.8; transform: translateX(-50%) translateY(-5px); }
+            100% { opacity: 0.5; transform: translateX(-50%) translateY(0); }
         }
 
         .typewriter-container {
@@ -923,249 +902,237 @@
         }
 
         @keyframes blink {
-
-            from,
-            to {
-                border-color: transparent
-            }
-
-            50% {
-                border-color: var(--primary);
-            }
+            from, to { border-color: transparent }
+            50% { border-color: var(--primary); }
         }
     </style>
 </head>
-
 <body>
-    <nav>
-        <div class="nav-content">
-            <div class="logo-container">
-                <img src="img/logo_high_res.png" alt="Logo" class="logo-img">
-            </div>
-            <div class="nav-links">
-                <a href="#about" class="nav-link">About</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#contact" class="nav-link">Contact</a>
-                <button class="theme-toggle" onclick="toggleTheme()">
-                    <i class="fas fa-moon"></i>
-                </button>
-            </div>
+<nav>
+    <div class="nav-content">
+        <div class="logo-container">
+            <img src="img/logo_high_res.png" alt="Logo" class="logo-img">
         </div>
-
-    </nav>
-
-    <div class="container">
-        <section class="hero-section" id="about">
-            <div class="left-section">
-                <div class="profile-container">
-                    <div class="profile-background"></div>
-                    <div class="profile-background-2"></div>
-                    <div class="profile-frame">
-                        <img src="img/picture.jpg" alt="Developer Profile" class="profile-image">
-                        <div class="profile-overlay"></div>
-                    </div>
-                </div>
-                <div class="skills-container">
-                    <h3 class="skills-title">Core Skills</h3>
-                    <div class="skills-grid" id="skillsGrid"></div>
-                </div>
-
-
-
-            </div>
-            <div class="right-section">
-                <h1>My passion is <span class="typewriter-container"><span class="typewriter-text"></span></span></h1>
-                <p class="bio">
-                    Hey! I'm a tech enthusiast who loves diving into new technologies and finding creative solutions for
-                    small and big problems.
-                    Researching connected mobility using AI and 5G networks, working as Software Developer and building
-                    Apps in my spare time is my passion.
-
-                </p>
-                <div class="social-links">
-                    <a href="https://forum.kiunke.dev" class="social-icon" target="_blank" rel="noopener noreferrer">
-                        <i class="fa-solid fa-rss"></i>
-                    </a>
-
-                    <a href="https://www.linkedin.com/in/sebastian-kiunke-3b8492213/" class="social-icon"
-                        target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-
-
-                    <a href="https://app.tsv.coach" class="social-icon" target="_blank" rel="noopener noreferrer">
-                        <i class="fa-solid fa-trophy"></i>
-                    </a>
-
-
-                </div>
-                <a href="#contact" class="button">
-                    <i class="fas fa-paper-plane"></i>
-                    Let's Connect
-                </a>
-            </div>
-        </section>
-
-        <section class="projects-section" id="projects">
-            <div class="projects-background"></div>
-            <div class="projects-content">
-                <h2 class="section-title">Featured Projects</h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="project-image-container">
-                            <img src="img/tsv_coach_high_res.png" alt="TSV.coach" class="project-image">
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">Sports Organisation Management Tool</h3>
-                            <div class="tech-stack">
-                                <span class="tech-tag">
-                                    <i class="fab fa-flutter"></i>
-                                    Flutter
-                                </span>
-                                <span class="tech-tag">
-                                    <i class="fa-solid fa-database"></i>
-                                    PostgreSQL
-                                </span>
-                                <span class="tech-tag">
-                                    <i class="fa-solid fa-mail-bulk"></i>
-                                    External Services
-                                </span>
-                            </div>
-
-
-                            <p class="project-description">
-                                A free management platform for sports organisations to create events and collect
-                                registrations with one click.
-                            </p>
-                            <div class="project-links">
-
-
-
-
-
-                                <a href="https://forum.kiunke.dev" class="project-link secondary" target="_blank"
-                                    rel="noopener noreferrer">
-                                    <i class="fa-solid fa-book-atlas"></i>
-
-                                    Documentation & Forum
-                                </a>
-
-                                <a href="https://app.tsv.coach" class="project-link primary" target="_blank"
-                                    rel="noopener noreferrer">
-                                    <i class="fas fa-external-link"></i>
-                                    Visit TSV.coach
-                                </a>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--                <div class="project-card">-->
-                    <!--                    <div class="project-image-container">-->
-                    <!--                        <img src="img/picture.jpg" alt="Project 2" class="project-image">-->
-                    <!--                    </div>-->
-                    <!--                    <div class="project-content">-->
-                    <!--                        <h3 class="project-title">AI Shopping Assistant</h3>-->
-                    <!--                        <div class="tech-stack">-->
-                    <!--                            <span class="tech-tag">Python</span>-->
-                    <!--                            <span class="tech-tag">TensorFlow</span>-->
-                    <!--                            <span class="tech-tag">Firebase</span>-->
-                    <!--                        </div>-->
-                    <!--                        <p class="project-description">-->
-                    <!--                            E-commerce platform with AI-powered product recommendations and-->
-                    <!--                            personalized shopping experience.-->
-                    <!--                        </p>-->
-                    <!--                        <div class="project-links">-->
-                    <!--                            <a href="#" class="project-link primary">-->
-                    <!--                                <i class="fas fa-eye"></i>-->
-                    <!--                                Live Demo-->
-                    <!--                            </a>-->
-                    <!--                            <a href="#" class="project-link secondary">-->
-                    <!--                                <i class="fab fa-github"></i>-->
-                    <!--                                Source Code-->
-                    <!--                            </a>-->
-                    <!--                        </div>-->
-                    <!--                    </div>-->
-                    <!--                </div>-->
-
-
-                </div>
-            </div>
-        </section>
-
-        <section class="contact-section" id="contact">
-            <h2 class="section-title">Get in Touch</h2>
-            <div class="contact-grid">
-                <div class="contact-card">
-                    <i class="fas fa-envelope contact-icon"></i>
-                    <div class="contact-info">
-                        <h3>Email</h3>
-                        <p>contact(at)kiunke.dev</p>
-                    </div>
-                </div>
-                <div class="contact-card">
-                    <i class="fas fa-map-marker-alt contact-icon"></i>
-                    <div class="contact-info">
-                        <h3>Location</h3>
-                        <p>Germany, Finland</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <div class="nav-links">
+            <a href="#about" class="nav-link">About</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#contact" class="nav-link">Contact</a>
+            <button class="theme-toggle" onclick="toggleTheme()">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
     </div>
 
-    <footer>
-        <div class="footer-background"></div>
-        <div class="footer-content">
-            <img src="img/logo_high_res.png" alt="Logo" class="footer-logo">
-            <p class="footer-text">&copy;
-                <script>document.write(new Date().getFullYear())</script> Kiunke.dev.
-            </p>
+</nav>
+
+<div class="container">
+    <section class="hero-section" id="about">
+        <div class="left-section">
+            <div class="profile-container">
+                <div class="profile-background"></div>
+                <div class="profile-background-2"></div>
+                <div class="profile-frame">
+                    <img src="img/picture.jpg" alt="Developer Profile" class="profile-image">
+                    <div class="profile-overlay"></div>
+                </div>
+            </div>
+            <div class="skills-container">
+                <h3 class="skills-title">Core Skills</h3>
+                <div class="skills-grid" id="skillsGrid"></div>
+            </div>
+
+
+
         </div>
-    </footer>
+        <div class="right-section">
+            <h1>My passion is <span class="typewriter-container"><span class="typewriter-text"></span></span></h1>
+            <p class="bio">
+                Hey! I'm a tech enthusiast who loves diving into new technologies and finding creative solutions for small and big problems.
+                Researching connected mobility using AI and 5G networks, working as Software Developer and building Apps in my spare time is my passion.
 
-    <script>
+            </p>
+            <div class="social-links">
+                <a href="https://forum.kiunke.dev" class="social-icon" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-solid fa-rss"></i>
+                </a>
 
-        const skills = [
-            {
-                name: 'Apps',
-                icon: 'fab fa-flutter',
-                level: 99,
-
-            },
-            {
-                name: 'Server',
-                icon: 'fa-solid fa-server',
-                level: 85,
-
-            },
-            {
-                name: 'Design',
-                icon: 'fa-solid fa-swatchbook',
-                level: 75,
-
-            },
-            {
-                name: 'AI',
-                icon: 'fa-solid fa-robot',
-                level: 66,
-
-            },
-
-        ];
+                <a href="https://www.linkedin.com/in/sebastian-kiunke-3b8492213/" class="social-icon" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin"></i>
+                </a>
 
 
-        function initializeSkills() {
-            const skillsGrid = document.getElementById('skillsGrid');
-            const dialog = document.getElementById('skillDialog');
+                <a href="https://app.tsv.coach" class="social-icon" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-solid fa-trophy"></i>
+                </a>
 
-            skillsGrid.innerHTML = '';
 
-            skills.forEach(skill => {
-                const skillItem = document.createElement('div');
-                skillItem.className = 'skill-item';
+            </div>
+            <a href="#contact" class="button">
+                <i class="fas fa-paper-plane"></i>
+                Let's Connect
+            </a>
+        </div>
+    </section>
 
-                skillItem.innerHTML = `
+    <section class="projects-section" id="projects">
+        <div class="projects-background"></div>
+        <div class="projects-content">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image-container">
+                        <img src="img/tsv_coach_high_res.png" alt="TSV.coach" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Sports Organisation Management Tool
+
+                            <img src="https://status.kiunke.dev/api/badge/2/status?style=flat-square" alt="Status Badge">
+
+                        </h3>
+
+                        <div class="tech-stack">
+            <span class="tech-tag">
+                <i class="fab fa-flutter"></i>
+               Flutter
+            </span>
+                            <span class="tech-tag">
+                <i class="fa-solid fa-database"></i>
+               PostgreSQL
+            </span>
+                            <span class="tech-tag">
+                <i class="fa-solid fa-mail-bulk"></i>
+                External Services
+            </span>
+                        </div>
+
+
+                        <p class="project-description">
+                           A free management platform for sports organisations to create events and collect registrations with one click.
+                        </p>
+                        <div class="project-links">
+
+
+
+
+                            <a href="https://forum.kiunke.dev" class="project-link secondary" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-solid fa-book-atlas"></i>
+
+                                Documentation & Forum
+                            </a>
+
+                            <a href="https://app.tsv.coach" class="project-link primary" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-external-link"></i>
+                                Visit TSV.coach
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+<!--                <div class="project-card">-->
+<!--                    <div class="project-image-container">-->
+<!--                        <img src="img/picture.jpg" alt="Project 2" class="project-image">-->
+<!--                    </div>-->
+<!--                    <div class="project-content">-->
+<!--                        <h3 class="project-title">AI Shopping Assistant</h3>-->
+<!--                        <div class="tech-stack">-->
+<!--                            <span class="tech-tag">Python</span>-->
+<!--                            <span class="tech-tag">TensorFlow</span>-->
+<!--                            <span class="tech-tag">Firebase</span>-->
+<!--                        </div>-->
+<!--                        <p class="project-description">-->
+<!--                            E-commerce platform with AI-powered product recommendations and-->
+<!--                            personalized shopping experience.-->
+<!--                        </p>-->
+<!--                        <div class="project-links">-->
+<!--                            <a href="#" class="project-link primary">-->
+<!--                                <i class="fas fa-eye"></i>-->
+<!--                                Live Demo-->
+<!--                            </a>-->
+<!--                            <a href="#" class="project-link secondary">-->
+<!--                                <i class="fab fa-github"></i>-->
+<!--                                Source Code-->
+<!--                            </a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <h2 class="section-title">Get in Touch</h2>
+        <div class="contact-grid">
+            <div class="contact-card">
+                <i class="fas fa-envelope contact-icon"></i>
+                <div class="contact-info">
+                    <h3>Email</h3>
+                    <p>contact(at)kiunke.dev</p>
+                </div>
+            </div>
+            <div class="contact-card">
+                <i class="fas fa-map-marker-alt contact-icon"></i>
+                <div class="contact-info">
+                    <h3>Location</h3>
+                    <p>Germany, Finland</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<footer>
+    <div class="footer-background"></div>
+    <div class="footer-content">
+        <img src="img/logo_high_res.png" alt="Logo" class="footer-logo">
+        <p class="footer-text">&copy; <script>document.write(new Date().getFullYear())</script> Kiunke.dev.</p>
+    </div>
+</footer>
+
+<script>
+
+    const skills = [
+        {
+            name: 'Apps',
+            icon: 'fab fa-flutter',
+            level: 99,
+
+        },
+        {
+            name: 'Server',
+            icon: 'fa-solid fa-server',
+            level: 85,
+
+        },
+        {
+            name: 'Design',
+            icon: 'fa-solid fa-swatchbook',
+            level: 75,
+
+        },
+        {
+            name: 'AI',
+            icon: 'fa-solid fa-robot',
+            level: 66,
+
+        },
+
+    ];
+
+
+    function initializeSkills() {
+        const skillsGrid = document.getElementById('skillsGrid');
+        const dialog = document.getElementById('skillDialog');
+
+        skillsGrid.innerHTML = '';
+
+        skills.forEach(skill => {
+            const skillItem = document.createElement('div');
+            skillItem.className = 'skill-item';
+
+            skillItem.innerHTML = `
       <div class="skill-content">
         <i class="${skill.icon} skill-icon"></i>
         <div class="skill-name">${skill.name}</div>
@@ -1175,176 +1142,175 @@
       </div>
     `;
 
-                skillItem.addEventListener('click', () => showProjects(skill));
-                skillsGrid.appendChild(skillItem);
-            });
-        }
+            skillItem.addEventListener('click', () => showProjects(skill));
+            skillsGrid.appendChild(skillItem);
+        });
+    }
 
-        function showProjects(skill) {
-            const dialog = document.getElementById('skillDialog');
-            const title = document.getElementById('dialogTitle');
-            const projects = document.getElementById('dialogProjects');
+    function showProjects(skill) {
+        const dialog = document.getElementById('skillDialog');
+        const title = document.getElementById('dialogTitle');
+        const projects = document.getElementById('dialogProjects');
 
-            title.textContent = `${skill.name} Projects`;
-            projects.innerHTML = skill.projects
-                .map(project => `
+        title.textContent = `${skill.name} Projects`;
+        projects.innerHTML = skill.projects
+            .map(project => `
       <div class="project-item">
         <h4>${project.name}</h4>
         <p>${project.description}</p>
       </div>
     `)
-                .join('');
+            .join('');
 
-            dialog.showModal();
-        }
+        dialog.showModal();
+    }
 
-        function closeDialog() {
-            document.getElementById('skillDialog').close();
-        }
+    function closeDialog() {
+        document.getElementById('skillDialog').close();
+    }
 
-        document.addEventListener('DOMContentLoaded', initializeSkills);
+    document.addEventListener('DOMContentLoaded', initializeSkills);
 
-        document.addEventListener('DOMContentLoaded', () => {
-            const words = [
-                'simple',
-                'fast',
-                'sleek',
-                'smart',
-                'apps',
-                'modern',
-                'clean',
-                'swift',
-                'blogs',
-                'solid',
-                'sharp',
-                'smooth',
-                'robust',
-                'insights',
-                'precise',
-                'services',
-                'unique',
-                'lasting',
-                'secure',
-                'intuitive',
-                'research',
-                'agile'
-            ];
-            const typewriterText = document.querySelector('.typewriter-text');
-            let wordIndex = 0;
-            let charIndex = 0;
-            let isDeleting = false;
-            let delayBase = 200;
+    document.addEventListener('DOMContentLoaded', () => {
+        const words = [
+            'simple',
+            'fast',
+            'sleek',
+            'smart',
+            'apps',
+            'modern',
+            'clean',
+            'swift',
+            'blogs',
+            'solid',
+            'sharp',
+            'smooth',
+            'robust',
+            'insights',
+            'precise',
+            'services',
+            'unique',
+            'lasting',
+            'secure',
+            'intuitive',
+            'research',
+            'agile'
+        ];
+        const typewriterText = document.querySelector('.typewriter-text');
+        let wordIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let delayBase = 200;
 
-            function type() {
-                const currentWord = words[wordIndex];
+        function type() {
+            const currentWord = words[wordIndex];
 
-                if (isDeleting) {
-                    typewriterText.textContent = currentWord.substring(0, charIndex - 1);
-                    charIndex--;
-                } else {
-                    typewriterText.textContent = currentWord.substring(0, charIndex + 1);
-                    charIndex++;
-                }
-
-                if (!isDeleting && charIndex === currentWord.length) {
-                    isDeleting = true;
-                    setTimeout(type, delayBase * 2);
-                } else if (isDeleting && charIndex === 0) {
-                    isDeleting = false;
-                    wordIndex = (wordIndex + 1) % words.length;
-                    setTimeout(type, delayBase);
-                } else {
-                    setTimeout(type, isDeleting ? delayBase / 2 : delayBase);
-                }
+            if (isDeleting) {
+                typewriterText.textContent = currentWord.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typewriterText.textContent = currentWord.substring(0, charIndex + 1);
+                charIndex++;
             }
 
-            type();
+            if (!isDeleting && charIndex === currentWord.length) {
+                isDeleting = true;
+                setTimeout(type, delayBase * 2);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                wordIndex = (wordIndex + 1) % words.length;
+                setTimeout(type, delayBase);
+            } else {
+                setTimeout(type, isDeleting ? delayBase / 2 : delayBase);
+            }
+        }
+
+        type();
         });
         // Start the animation
 
 
-        // Theme Toggle Functionality
-        function toggleTheme() {
-            const body = document.body;
-            const themeToggle = document.querySelector('.theme-toggle i');
+    // Theme Toggle Functionality
+    function toggleTheme() {
+        const body = document.body;
+        const themeToggle = document.querySelector('.theme-toggle i');
 
-            if (body.getAttribute('data-theme') === 'dark') {
-                body.removeAttribute('data-theme');
-                themeToggle.classList.remove('fa-sun');
-                themeToggle.classList.add('fa-moon');
-                localStorage.setItem('theme', 'light');
-            } else {
-                body.setAttribute('data-theme', 'dark');
-                themeToggle.classList.remove('fa-moon');
-                themeToggle.classList.add('fa-sun');
-                localStorage.setItem('theme', 'dark');
-            }
+        if (body.getAttribute('data-theme') === 'dark') {
+            body.removeAttribute('data-theme');
+            themeToggle.classList.remove('fa-sun');
+            themeToggle.classList.add('fa-moon');
+            localStorage.setItem('theme', 'light');
+        } else {
+            body.setAttribute('data-theme', 'dark');
+            themeToggle.classList.remove('fa-moon');
+            themeToggle.classList.add('fa-sun');
+            localStorage.setItem('theme', 'dark');
         }
+    }
 
-        // Check for saved theme preference
-        document.addEventListener('DOMContentLoaded', () => {
-            const savedTheme = localStorage.getItem('theme');
-            const themeToggle = document.querySelector('.theme-toggle i');
+    // Check for saved theme preference
+    document.addEventListener('DOMContentLoaded', () => {
+        const savedTheme = localStorage.getItem('theme');
+        const themeToggle = document.querySelector('.theme-toggle i');
 
-            if (savedTheme === 'dark') {
-                document.body.setAttribute('data-theme', 'dark');
-                themeToggle.classList.remove('fa-moon');
-                themeToggle.classList.add('fa-sun');
-            }
-        });
+        if (savedTheme === 'dark') {
+            document.body.setAttribute('data-theme', 'dark');
+            themeToggle.classList.remove('fa-moon');
+            themeToggle.classList.add('fa-sun');
+        }
+    });
 
-        document.addEventListener('DOMContentLoaded', () => {
-            const skills = [
-                { name: 'Flutter', icon: 'fab fa-flutter', level: 5 },
-                { name: 'React', icon: 'fab fa-react', level: 4 },
-                { name: 'Node.js', icon: 'fab fa-node-js', level: 4 },
-                { name: 'Python', icon: 'fab fa-python', level: 3 },
-                { name: 'AWS', icon: 'fab fa-aws', level: 4 },
-                { name: 'Docker', icon: 'fab fa-docker', level: 3 },
-                { name: 'DevOps', icon: 'fas fa-infinity', level: 3 },
-                { name: 'Mobile', icon: 'fas fa-mobile-alt', level: 5 },
-                { name: 'Web', icon: 'fas fa-globe', level: 4 }
-            ];
+    document.addEventListener('DOMContentLoaded', () => {
+        const skills = [
+            { name: 'Flutter', icon: 'fab fa-flutter', level: 5 },
+            { name: 'React', icon: 'fab fa-react', level: 4 },
+            { name: 'Node.js', icon: 'fab fa-node-js', level: 4 },
+            { name: 'Python', icon: 'fab fa-python', level: 3 },
+            { name: 'AWS', icon: 'fab fa-aws', level: 4 },
+            { name: 'Docker', icon: 'fab fa-docker', level: 3 },
+            { name: 'DevOps', icon: 'fas fa-infinity', level: 3 },
+            { name: 'Mobile', icon: 'fas fa-mobile-alt', level: 5 },
+            { name: 'Web', icon: 'fas fa-globe', level: 4 }
+        ];
 
-            const container = document.getElementById('skillsCloud');
-            const containerRect = container.getBoundingClientRect();
-            const center = {
-                x: containerRect.width / 2,
-                y: containerRect.height / 2
-            };
+        const container = document.getElementById('skillsCloud');
+        const containerRect = container.getBoundingClientRect();
+        const center = {
+            x: containerRect.width / 2,
+            y: containerRect.height / 2
+        };
 
-            skills.forEach((skill, index) => {
-                const angle = (index / skills.length) * Math.PI * 2;
-                const radius = Math.min(containerRect.width, containerRect.height) / 3;
+        skills.forEach((skill, index) => {
+            const angle = (index / skills.length) * Math.PI * 2;
+            const radius = Math.min(containerRect.width, containerRect.height) / 3;
 
-                const skillElement = document.createElement('div');
-                skillElement.className = `skill-item skill-level-${skill.level}`;
-                skillElement.innerHTML = `
+            const skillElement = document.createElement('div');
+            skillElement.className = `skill-item skill-level-${skill.level}`;
+            skillElement.innerHTML = `
             <i class="${skill.icon}"></i>
             ${skill.name}
         `;
 
-                const x = center.x + Math.cos(angle) * radius - 50;
-                const y = center.y + Math.sin(angle) * radius - 15;
+            const x = center.x + Math.cos(angle) * radius - 50;
+            const y = center.y + Math.sin(angle) * radius - 15;
 
-                skillElement.style.left = `${x}px`;
-                skillElement.style.top = `${y}px`;
+            skillElement.style.left = `${x}px`;
+            skillElement.style.top = `${y}px`;
 
-                container.appendChild(skillElement);
+            container.appendChild(skillElement);
+        });
+    });
+
+
+    // Add smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
             });
         });
-
-
-        // Add smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+    });
+</script>
 </body>
-
 </html>
